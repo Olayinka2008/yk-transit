@@ -15,7 +15,9 @@ const TFLLineStatusPage = async () => {
     <main className="flex-1 p-4 space-y-4">
       <TitleHeader
         title="TFL Line Status"
-        icon={<HiStatusOnline className="size-6 text-pumpkin-900" />}
+        icon={
+          <HiStatusOnline className="size-6 text-pumpkin-900 dark:text-pumpkin-50" />
+        }
       />
 
       <div className="w-full h-[500px] overflow-y-auto">

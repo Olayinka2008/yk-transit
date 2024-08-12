@@ -12,7 +12,9 @@ const StaffLDBPage = async () => {
     <main className="flex-1 p-4 space-y-4">
       <TitleHeader
         title="Staff LDB"
-        icon={<FaTrainSubway className="size-6 text-pumpkin-900" />}
+        icon={
+          <FaTrainSubway className="size-6 text-pumpkin-900 dark:text-pumpkin-50" />
+        }
       />
 
       <Schedule />

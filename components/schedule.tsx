@@ -53,13 +53,13 @@ export function Schedule() {
   });
 
   return (
-    <div className="container mx-auto px-4 py-8 text-pumpkin-900">
+    <div className="container mx-auto px-4 py-8 text-pumpkin-900 dark:text-pumpkin-100">
       <div className="relative flex-1 mb-6">
-        <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+        <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground dark:text-pumpkin-100" />
         <Input
           type="search"
           placeholder="Search by location or headcode"
-          className="pl-8"
+          className="pl-8 dark:text-pumpkin-100 placeholder:dark:text-pumpkin-100 dark:bg-transparent dark:ring-pumpkin-100"
           value={searchText}
           onChange={handleSearch}
         />
@@ -79,7 +79,7 @@ export function Schedule() {
             {filteredTrainServices.map((service, index) => (
               <CarouselItem key={index} className="xl:basis-1/2 px-8">
                 <Card
-                  className="cursor-pointer hover:bg-pumpkin-50 dark:hover:bg-pumpkin-900 text-pumpkin-900"
+                  className="cursor-pointer hover:bg-pumpkin-50 dark:hover:bg-pumpkin-900 text-pumpkin-900 dark:text-pumpkin-50"
                   onClick={() => handleServiceClick(service)}
                 >
                   <CardContent className="grid gap-4">

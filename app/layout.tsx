@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
 import "./globals.css";
+import { ThemeProvider } from "@/provider/theme-provider";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -23,9 +24,19 @@ export default function RootLayout({
     <ClerkProvider afterSignOutUrl={"/"}>
       <html
         lang="en"
-        className="scroll-smooth dark:text-pumpkin-50 text-pumpkin-900"
+        className="scroll-smooth dark:text-pumpkin-50 text-pumpkin-900 dark:bg-dark-shade-600"
+        suppressHydrationWarning
       >
-        <body className={roboto.className}>{children}</body>
+        <body className={roboto.className}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   );

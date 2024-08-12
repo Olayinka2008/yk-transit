@@ -61,6 +61,10 @@ const config = {
           "900": "#7c3d12",
           "950": "#432007",
         },
+        "dark-shade": {
+          "500": "#18181B",
+          "600": "#0E0E11",
+        },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

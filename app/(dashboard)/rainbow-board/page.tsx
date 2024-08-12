@@ -15,7 +15,7 @@ const RainbowBoardPage = async () => {
     <main className="flex-1 p-4 space-y-4">
       <TitleHeader
         title="Rainbow Board"
-        icon={<Rainbow className="size-6 text-pumpkin-900" />}
+        icon={<Rainbow className="size-6 text-pumpkin-900 dark:text-pumpkin-50" />}
       />
 
       <div className="w-full h-[500px] overflow-y-auto">

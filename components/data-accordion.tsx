@@ -27,19 +27,21 @@ export function DataAccordion({ data }: DataAccordionProps) {
     <Accordion
       type="single"
       collapsible
-      className="w-full h-full text-pumpkin-900"
+      className="w-full h-full text-pumpkin-900 dark:text-pumpkin-50"
     >
       {data.map(({ id, message, name, status, statusDetails, color }) => (
         <AccordionItem
           value={name}
           key={id}
-          className="hover:bg-pumpkin-200 cursor-pointer rounded h-max border-l-4 transition duration-300"
+          className="hover:bg-pumpkin-200 hover:dark:text-pumpkin-700 cursor-pointer rounded h-max border-l-4 transition duration-300"
           style={{ borderLeftColor: color }}
         >
           <AccordionTrigger className="px-8">
             <div className="flex flex-col items-start">
               <p>{name}</p>
-              <p className="text-[12px] text-pumpkin-700">{status}</p>
+              <p className="text-[12px] text-pumpkin-700 dark:text-pumpkin-400">
+                {status}
+              </p>
             </div>
           </AccordionTrigger>
           <AccordionContent className="px-8">
@@ -81,14 +83,14 @@ export function MessageAccordion() {
           <AccordionItem
             value={messageTitle}
             key={messageNo}
-            className="hover:bg-pumpkin-200 cursor-pointer rounded h-max transition duration-300"
+            className="hover:bg-pumpkin-600 cursor-pointer rounded h-max transition duration-300 dark:text-pumpkin-100"
           >
             <AccordionTrigger className="px-8">
               <div className="flex items-center gap-4">
-                <p className="bg-white rounded-full p-4">LO</p>
+                <p className="bg-white dark:bg-pumpkin-400 rounded-full size-12 flex items-center justify-center p-4 dark:text-pumpkin-50">LO</p>
                 <div className="flex flex-col items-start w-full">
                   <p>{messageTitle}</p>
-                  <p className="text-sm flex gap-4 text-pumpkin-700">
+                  <p className="text-sm flex gap-4 text-pumpkin-700 dark:text-pumpkin-200">
                     <small>{dateSent}</small>
                     <small>{time}</small>
                   </p>

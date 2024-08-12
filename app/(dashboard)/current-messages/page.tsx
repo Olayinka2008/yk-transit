@@ -13,7 +13,7 @@ const CurrentMessagePage = async () => {
     <main className="flex-1 p-4 space-y-4">
       <TitleHeader
         title="Current Messages"
-        icon={<MessageCircle className="size-6 text-pumpkin-900" />}
+        icon={<MessageCircle className="size-6 text-pumpkin-900 dark:text-pumpkin-50" />}
       />
       <MessageAccordion />
     </main>
