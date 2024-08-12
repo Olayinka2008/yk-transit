@@ -5,7 +5,7 @@ export default async function Home() {
 
   return (
     <main className="h-full w-full flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-medium text-pumpkin-900 text-center leading-relaxed">
+      <h1 className="text-5xl font-medium text-pumpkin-900 dark:text-pumpkin-400 text-center leading-relaxed">
         Hi, <br />
         {user?.fullName} 👋🏻
       </h1>
